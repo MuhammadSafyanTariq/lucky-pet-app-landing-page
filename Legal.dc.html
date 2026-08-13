@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F8F8F8; color: #212121; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  a { color: #FF4B4B; }
+  a:hover { color: #E03A3A; }
+  :focus-visible { outline: 3px solid #2196F3; outline-offset: 3px; border-radius: 6px; }
+  #legal-body h1 { font-family: Nunito, sans-serif; font-weight: 900; font-size: clamp(30px,4.2vw,42px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+  #legal-body h2 { font-family: Nunito, sans-serif; font-weight: 800; font-size: 24px; line-height: 1.25; margin: 40px 0 0; }
+  #legal-body h3 { font-family: Nunito, sans-serif; font-weight: 800; font-size: 18px; margin: 26px 0 0; }
+  #legal-body p { font-size: 17px; line-height: 1.65; color: #3D3D3D; margin: 14px 0 0; text-wrap: pretty; }
+  #legal-body ul { margin: 14px 0 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
+  #legal-body li { font-size: 17px; line-height: 1.6; color: #3D3D3D; }
+  #legal-body hr { border: 0; border-top: 1px solid #E8E8E8; margin: 36px 0 0; }
+  #legal-body strong { color: #212121; }
+</style>
+</helmet>
+<div>
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(14px);border-bottom:1px solid #ECECEC">
+  <nav aria-label="Main" style="max-width:900px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Luckys Landing.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <img src="assets/luckys-logo.png" alt="Lucky's Pet App — back to home" style="height:44px;width:auto;display:block" />
+    </a>
+    <a href="Luckys Landing.dc.html#download" style="padding:10px 18px;border-radius:999px;background:#FF4B4B;color:#fff;text-decoration:none;font-weight:700;font-size:15px" style-hover="background:#E03A3A">Get the app</a>
+  </nav>
+</header>
+
+<main style="max-width:900px;margin:0 auto;padding:40px 20px 80px">
+  <div role="tablist" aria-label="Legal documents" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
+    <a href="#privacy" style="padding:10px 18px;border-radius:999px;background:#fff;border:1px solid #E6E6E6;text-decoration:none;color:#4A4A4A;font-weight:700;font-size:15px" style-hover="border-color:#FF4B4B;color:#FF4B4B">Privacy Policy</a>
+    <a href="#terms" style="padding:10px 18px;border-radius:999px;background:#fff;border:1px solid #E6E6E6;text-decoration:none;color:#4A4A4A;font-weight:700;font-size:15px" style-hover="border-color:#FF4B4B;color:#FF4B4B">Terms of Service</a>
+    <a href="#community" style="padding:10px 18px;border-radius:999px;background:#fff;border:1px solid #E6E6E6;text-decoration:none;color:#4A4A4A;font-weight:700;font-size:15px" style-hover="border-color:#FF4B4B;color:#FF4B4B">Community Guidelines</a>
+  </div>
+  <article id="legal-body" style="background:#fff;border:1px solid #EDEDED;border-radius:28px;padding:clamp(24px,4vw,52px);box-shadow:0 8px 26px rgba(0,0,0,0.04)">
+    <p style="color:#8A8A8A">Loading…</p>
+  </article>
+</main>
+
+<footer style="background:#fff;border-top:1px solid #ECECEC;padding:32px 20px">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;color:#8A8A8A;font-size:14px">
+    <span>© 2026 Lucky's Pet App. All rights reserved.</span>
+    <a href="mailto:luckyspetapp@gmail.com" style="text-decoration:none">luckyspetapp@gmail.com</a>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DOCS = {
+  privacy: { file: 'assets/privacy.md', title: 'Privacy Policy' },
+  terms: { file: 'assets/terms.md', title: 'Terms of Service' },
+  community: { file: 'assets/community.md', title: 'Community Guidelines' }
+};
+
+class Component extends DCLogic {
+  componentDidMount() {
+    this.load();
+    this._onHash = () => this.load();
+    window.addEventListener('hashchange', this._onHash);
+  }
+  componentWillUnmount() { window.removeEventListener('hashchange', this._onHash); }
+
+  markTabs(key) {
+    document.querySelectorAll('[role="tablist"] a').forEach((a) => {
+      const on = a.getAttribute('href') === '#' + key;
+      a.style.background = on ? '#FF4B4B' : '#fff';
+      a.style.borderColor = on ? '#FF4B4B' : '#E6E6E6';
+      a.style.color = on ? '#fff' : '#4A4A4A';
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+  }
+
+  load() {
+    const raw = (location.hash || '#privacy').slice(1);
+    const key = DOCS[raw] ? raw : 'privacy';
+    const doc = DOCS[key];
+    const el = document.getElementById('legal-body');
+    if (!el) return;
+    this.markTabs(key);
+    this._cache = this._cache || {};
+    const token = (this._req = (this._req || 0) + 1);
+    const paint = (md) => {
+      if (token !== this._req) return;
+      el.innerHTML = this.toHtml(md);
+      window.scrollTo({ top: 0 });
+    };
+    if (this._cache[key]) { paint(this._cache[key]); return; }
+    fetch(doc.file)
+      .then((r) => r.text())
+      .then((md) => { this._cache[key] = md; paint(md); })
+      .catch(() => { if (token === this._req) el.innerHTML = '<p>Could not load this document.</p>'; });
+  }
+
+  esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  inline(s) {
+    return this.esc(s)
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, t, h) => {
+        const map = { 'PRIVACY_POLICY.md': '#privacy', 'TERMS_OF_SERVICE.md': '#terms', 'COMMUNITY_GUIDELINES.md': '#community' };
+        return '<a href="' + (map[h] || h) + '">' + t + '</a>';
+      })
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
+  }
+
+  toHtml(md) {
+    const out = [];
+    let list = null;
+    const closeList = () => { if (list) { out.push('<ul>' + list.join('') + '</ul>'); list = null; } };
+    md.split('\n').forEach((raw) => {
+      const line = raw.replace(/\s+$/, '');
+      if (!line.trim()) { closeList(); return; }
+      if (/^---+$/.test(line.trim())) { closeList(); out.push('<hr />'); return; }
+      const li = line.match(/^\s*[-*]\s+(.*)$/);
+      if (li) { (list = list || []).push('<li>' + this.inline(li[1]) + '</li>'); return; }
+      closeList();
+      const h = line.match(/^(#{1,4})\s+(.*)$/);
+      if (h) { const n = Math.min(h[1].length, 3); out.push('<h' + n + '>' + this.inline(h[2]) + '</h' + n + '>'); return; }
+      out.push('<p>' + this.inline(line.trim()) + '</p>');
+    });
+    closeList();
+    return out.join('');
+  }
+}
+</script>
+</body>
+</html>

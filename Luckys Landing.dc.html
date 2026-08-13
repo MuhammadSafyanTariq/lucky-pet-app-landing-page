@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F8F8F8; color: #212121; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  a { color: #FF4B4B; }
+  a:hover { color: #E03A3A; }
+  :focus-visible { outline: 3px solid #2196F3; outline-offset: 3px; border-radius: 6px; }
+  @keyframes luckyFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+</style>
+</helmet>
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #ECECEC">
+  <nav aria-label="Main" style="max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#212121">
+      <img src="assets/luckys-logo.png" alt="Lucky's Pet App logo" style="height:44px;width:auto;display:block" />
+    </a>
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end">
+      <a href="#features" style="padding:9px 12px;border-radius:10px;text-decoration:none;color:#4A4A4A;font-weight:500;font-size:15px" style-hover="background:#F2F2F2;color:#212121">Features</a>
+      <a href="#how" style="padding:9px 12px;border-radius:10px;text-decoration:none;color:#4A4A4A;font-weight:500;font-size:15px" style-hover="background:#F2F2F2;color:#212121">How it Works</a>
+      <a href="#business" style="padding:9px 12px;border-radius:10px;text-decoration:none;color:#4A4A4A;font-weight:500;font-size:15px" style-hover="background:#F2F2F2;color:#212121">For Business</a>
+      <a href="#download" style="margin-left:6px;padding:11px 20px;border-radius:999px;text-decoration:none;background:#FF4B4B;color:#fff;font-weight:700;font-size:15px;box-shadow:0 6px 16px rgba(255,75,75,0.28)" style-hover="background:#E03A3A">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section style="position:relative;padding:72px 20px 64px">
+    <div style="position:absolute;inset:0;background:radial-gradient(900px 460px at 78% 12%, rgba(255,193,7,0.16), transparent 60%),radial-gradient(760px 420px at 12% 0%, rgba(33,150,243,0.12), transparent 62%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center">
+      <div data-reveal="">
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #EFE3D6;font-size:13px;font-weight:700;color:#8B5E3C;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+          <span aria-hidden="true" style="width:8px;height:8px;border-radius:99px;background:#FF4B4B"></span>iOS &amp; Android · web coming soon
+        </div>
+        <h1 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(38px,6vw,60px);line-height:1.04;letter-spacing:-0.025em;margin:18px 0 0;text-wrap:balance">The social app for<br />pet lovers.</h1>
+        <p style="font-size:clamp(17px,2.2vw,20px);line-height:1.55;color:#4A4A4A;margin:20px 0 0;max-width:520px;text-wrap:pretty">Share your pet's moments, go live, get gifted, and turn your love for pets into real earnings. Every tail wag, every zoomie, every 3am snack raid — there's an audience for it.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+          <a href="https://apps.apple.com/us/app/luckys-pet-app/id6760656812" target="_blank" rel="noopener" aria-label="Download Lucky's Pet App on the App Store" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none;box-shadow:0 10px 24px rgba(33,33,33,0.18)" style-hover="background:#000"><span aria-hidden="true" style="font-size:26px;line-height:1;display:block;flex:none"></span><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">Download on the</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">App Store</span></span></a>
+          <a href="https://play.google.com/store/apps/details?id=com.blackdada.app" target="_blank" rel="noopener" aria-label="Get Lucky's Pet App on Google Play" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none;box-shadow:0 10px 24px rgba(33,33,33,0.18)" style-hover="background:#000"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true" style="flex:none"><polygon points="2,1 14,12 2,23" fill="#34A853" /><polygon points="2,1 17.5,9.9 14,12" fill="#4285F4" /><polygon points="2,23 14,12 17.5,14.1" fill="#EA4335" /><polygon points="17.5,9.9 20.6,12 17.5,14.1 14,12" fill="#FBBC04" /></svg><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">GET IT ON</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">Google Play</span></span></a>
+        </div>
+        <p style="margin:16px 0 0;font-size:14px;color:#6B6B6B">Free to join. Coins, gifts and withdrawals built in.</p>
+      </div>
+
+      <div data-reveal="" style="display:flex;justify-content:center;align-items:flex-end;gap:18px">
+        <div style="width:min(260px,44vw);aspect-ratio:9/19;border-radius:38px;background:#212121;padding:9px;box-shadow:0 30px 60px rgba(33,33,33,0.22);animation:luckyFloat 7s ease-in-out infinite">
+          <div style="height:100%;border-radius:30px;background:#fff;overflow:hidden">
+            <img src="uploads/Frame 1171274939.png" alt="Lucky's home feed showing pet posts from people you follow" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" />
+          </div>
+        </div>
+        <div style="width:min(190px,32vw);aspect-ratio:9/19;border-radius:30px;background:#212121;padding:7px;box-shadow:0 24px 48px rgba(33,33,33,0.2);margin-bottom:34px">
+          <div style="height:100%;border-radius:24px;background:#fff;overflow:hidden">
+            <img src="uploads/Frame 1171274940.png" alt="Live Stream tab in Lucky's, listing streams that are on right now" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="At a glance" style="padding:0 20px 8px">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;background:#fff;border:1px solid #EDEDED;border-radius:24px;padding:26px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;box-shadow:0 8px 26px rgba(0,0,0,0.04)">
+      <div><div style="font-family:Nunito,sans-serif;font-weight:900;font-size:26px;color:#FF4B4B">Thousands</div><div style="color:#4A4A4A;font-size:15px;margin-top:2px">of pet lovers already sharing</div></div>
+      <div><div style="font-family:Nunito,sans-serif;font-weight:900;font-size:26px;color:#2196F3">Daily</div><div style="color:#4A4A4A;font-size:15px;margin-top:2px">live streams, every time zone</div></div>
+      <div><div style="font-family:Nunito,sans-serif;font-weight:900;font-size:26px;color:#FFAB00">Real cash</div><div style="color:#4A4A4A;font-size:15px;margin-top:2px">withdrawals, not just points</div></div>
+      <div><div style="font-family:Nunito,sans-serif;font-weight:900;font-size:26px;color:#8B5E3C">iOS + Android</div><div style="color:#4A4A4A;font-size:15px;margin-top:2px">one account, both stores</div></div>
+    </div>
+  </section>
+
+  <section id="features" style="padding:80px 20px 20px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div data-reveal="" style="max-width:640px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FF4B4B">Features</span>
+        <h2 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(30px,4.2vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:12px 0 0">Built for pets. And the people obsessed with them.</h2>
+      </div>
+
+      <div data-reveal="" style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:stretch">
+        <div>
+          <span style="font-size:13px;font-weight:700;color:#2196F3">SHARE</span>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:28px;margin:8px 0 0;line-height:1.2">Post the moments, not the highlight reel</h3>
+          <p style="color:#4A4A4A;font-size:17px;line-height:1.6;margin:12px 0 0;text-wrap:pretty">Photos and videos with captions, likes, comments and shares — updating in real time. Stories cover the quick stuff: the muddy paw, the stolen sock. The feed caches locally, so it loads instantly even when your signal doesn't.</p>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:10px;color:#4A4A4A;font-size:16px">
+            <li style="display:flex;gap:10px;align-items:flex-start"><span aria-hidden="true" style="margin-top:7px;width:7px;height:7px;border-radius:99px;background:#FF4B4B;flex:none"></span>Real-time likes, comments and shares</li>
+            <li style="display:flex;gap:10px;align-items:flex-start"><span aria-hidden="true" style="margin-top:7px;width:7px;height:7px;border-radius:99px;background:#FF4B4B;flex:none"></span>Stories for the moments that don't need to last</li>
+            <li style="display:flex;gap:10px;align-items:flex-start"><span aria-hidden="true" style="margin-top:7px;width:7px;height:7px;border-radius:99px;background:#FF4B4B;flex:none"></span>Offline caching — never a blank screen</li>
+          </ul>
+        </div>
+        <div style="border-radius:28px;background:linear-gradient(150deg,#FFF1EC,#F1E4D6);border:1px solid #EFE3D6;display:flex;align-items:center;justify-content:center;padding:24px 20px;min-height:340px">
+          <img src="uploads/Frame 1171274941.png" alt="A Lucky's profile page with follower counts and a grid of pet posts" style="width:auto;max-width:62%;height:100%;max-height:420px;min-height:300px;object-fit:contain;border-radius:22px;box-shadow:0 18px 40px rgba(33,33,33,0.16);display:block" />
+        </div>
+      </div>
+
+      <div data-reveal="" style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:stretch">
+        <div style="order:2;border-radius:28px;background:linear-gradient(150deg,#2C2C2C,#1A1A1A);display:flex;align-items:center;justify-content:center;padding:24px 20px;min-height:340px">
+          <img src="uploads/Frame 1171274940.png" alt="Live streams running in Lucky's with viewer counts" style="width:auto;max-width:62%;height:100%;max-height:420px;min-height:300px;object-fit:contain;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,0.4);display:block" />
+        </div>
+        <div style="order:1">
+          <span style="font-size:13px;font-weight:700;color:#FF4B4B">GO LIVE</span>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:28px;margin:8px 0 0;line-height:1.2">Your followers, live and talking back</h3>
+          <p style="color:#4A4A4A;font-size:17px;line-height:1.6;margin:12px 0 0;text-wrap:pretty">Start a stream in a tap. Viewers join with live chat and a running viewer count, powered by Agora for low-latency video. Puppy naps, training sessions, grooming days — people show up for all of it.</p>
+          <p style="color:#4A4A4A;font-size:17px;line-height:1.6;margin:12px 0 0">Search by username or name, follow back, and DM privately when a comment thread turns into a friendship.</p>
+        </div>
+      </div>
+
+      <div data-reveal="" style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:stretch">
+        <div>
+          <span style="font-size:13px;font-weight:700;color:#FFAB00">GIFTS</span>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:28px;margin:8px 0 0;line-height:1.2">Applause you can actually cash</h3>
+          <p style="color:#4A4A4A;font-size:17px;line-height:1.6;margin:12px 0 0;text-wrap:pretty">Viewers send virtual gifts during live streams and on posts. Coin packs are bought through secure in-app purchase, so the person sending a gift and the creator receiving it are both covered.</p>
+          <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+            <span style="padding:9px 15px;border-radius:999px;background:#FFF6DE;color:#7A5500;font-weight:700;font-size:14px">Gifts on live</span>
+            <span style="padding:9px 15px;border-radius:999px;background:#FFECEC;color:#B02A2A;font-weight:700;font-size:14px">Gifts on posts</span>
+            <span style="padding:9px 15px;border-radius:999px;background:#E9F4FE;color:#12609E;font-weight:700;font-size:14px">Secure coin packs</span>
+          </div>
+        </div>
+        <div style="border-radius:28px;background:linear-gradient(150deg,#FFF6DE,#FFE9E4);border:1px solid #F3E6D2;display:flex;align-items:center;justify-content:center;padding:24px 20px;min-height:340px">
+          <img src="uploads/Frame 1171274939.png" alt="Pet posts in the Lucky's feed with likes, comments and gifts" style="width:auto;max-width:62%;height:100%;max-height:420px;min-height:300px;object-fit:contain;border-radius:22px;box-shadow:0 18px 40px rgba(33,33,33,0.16);display:block" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding:88px 20px">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;background:#212121;border-radius:32px;padding:clamp(28px,5vw,64px);color:#fff">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFC107">How earning works</span>
+      <h2 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(30px,4.2vw,44px);line-height:1.1;letter-spacing:-0.02em;margin:12px 0 0;max-width:700px">Three steps from a good dog photo to money in your account.</h2>
+      <p style="color:#C9C9C9;font-size:17px;line-height:1.6;margin:14px 0 0;max-width:640px">Your engagement and gifts convert into real, withdrawable earnings — not points that sit in an app forever.</p>
+      <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+        <div style="background:#2C2C2C;border-radius:24px;padding:28px">
+          <div style="width:44px;height:44px;border-radius:14px;background:#FF4B4B;display:flex;align-items:center;justify-content:center;font-family:Nunito,sans-serif;font-weight:900;font-size:20px">1</div>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:21px;margin:18px 0 0">Post or go live</h3>
+          <p style="color:#BDBDBD;font-size:16px;line-height:1.55;margin:8px 0 0">Share pet photos and videos, drop a story, or start a live stream for your followers.</p>
+        </div>
+        <div style="background:#2C2C2C;border-radius:24px;padding:28px">
+          <div style="width:44px;height:44px;border-radius:14px;background:#2196F3;display:flex;align-items:center;justify-content:center;font-family:Nunito,sans-serif;font-weight:900;font-size:20px">2</div>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:21px;margin:18px 0 0">Collect followers, likes &amp; gifts</h3>
+          <p style="color:#BDBDBD;font-size:16px;line-height:1.55;margin:8px 0 0">People find you, follow, and send gifts while you're live or on posts they love.</p>
+        </div>
+        <div style="background:#2C2C2C;border-radius:24px;padding:28px">
+          <div style="width:44px;height:44px;border-radius:14px;background:#FFC107;color:#3A2A00;display:flex;align-items:center;justify-content:center;font-family:Nunito,sans-serif;font-weight:900;font-size:20px">3</div>
+          <h3 style="font-family:Nunito,sans-serif;font-weight:800;font-size:21px;margin:18px 0 0">Withdraw real earnings</h3>
+          <p style="color:#BDBDBD;font-size:16px;line-height:1.55;margin:8px 0 0">Cash out to your bank account or PayPal, straight from the app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="business" style="padding:8px 20px 88px">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;background:#fff;border:1px solid #EDEDED;border-radius:32px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;align-items:center;box-shadow:0 8px 26px rgba(0,0,0,0.04)">
+      <div>
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2196F3">For pet businesses</span>
+        <h2 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(27px,3.4vw,36px);line-height:1.15;letter-spacing:-0.02em;margin:12px 0 0">Advertise fairly, reach real pet lovers</h2>
+        <p style="color:#4A4A4A;font-size:17px;line-height:1.6;margin:14px 0 0;text-wrap:pretty">Groomers, trainers, treat makers and small brands can run campaigns inside the app. Placement isn't auctioned to the biggest budget: a fairness algorithm rotates exposure, prioritises accounts people already follow, caps daily reach, and gives under-exposed campaigns their turn.</p>
+        <a href="mailto:luckyspetapp@gmail.com" style="display:inline-block;margin-top:24px;padding:13px 24px;border-radius:999px;background:#2196F3;color:#fff;text-decoration:none;font-weight:700" style-hover="background:#1877C7">Talk to us about ads</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:#F8F8F8;border-radius:18px;padding:18px 20px"><strong style="font-family:Nunito,sans-serif;font-size:17px">Follower-aware</strong><div style="color:#4A4A4A;font-size:15px;margin-top:4px">Accounts a user already follows come first.</div></div>
+        <div style="background:#F8F8F8;border-radius:18px;padding:18px 20px"><strong style="font-family:Nunito,sans-serif;font-size:17px">Daily reach caps</strong><div style="color:#4A4A4A;font-size:15px;margin-top:4px">No one campaign dominates a feed.</div></div>
+        <div style="background:#F8F8F8;border-radius:18px;padding:18px 20px"><strong style="font-family:Nunito,sans-serif;font-size:17px">Rotation for the little guys</strong><div style="color:#4A4A4A;font-size:15px;margin-top:4px">Under-exposed campaigns get boosted, not buried.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Trust and safety" style="padding:0 20px 88px">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
+      <div style="background:#fff;border:1px solid #EDEDED;border-radius:20px;padding:22px"><div aria-hidden="true" style="width:34px;height:34px;border-radius:11px;background:#FFECEC"></div><div style="font-family:Nunito,sans-serif;font-weight:800;font-size:17px;margin-top:14px">Block &amp; report tools</div><div style="color:#4A4A4A;font-size:15px;margin-top:4px">One tap to shut down bad behaviour.</div></div>
+      <div style="background:#fff;border:1px solid #EDEDED;border-radius:20px;padding:22px"><div aria-hidden="true" style="width:34px;height:34px;border-radius:11px;background:#E9F4FE"></div><div style="font-family:Nunito,sans-serif;font-weight:800;font-size:17px;margin-top:14px">Secure payments</div><div style="color:#4A4A4A;font-size:15px;margin-top:4px">In-app purchase for coins, verified withdrawals.</div></div>
+      <div style="background:#fff;border:1px solid #EDEDED;border-radius:20px;padding:22px"><div aria-hidden="true" style="width:34px;height:34px;border-radius:11px;background:#FFF6DE"></div><div style="font-family:Nunito,sans-serif;font-weight:800;font-size:17px;margin-top:14px">Easy account deletion</div><div style="color:#4A4A4A;font-size:15px;margin-top:4px">Delete your account from inside the app.</div></div>
+      <div style="background:#fff;border:1px solid #EDEDED;border-radius:20px;padding:22px"><div aria-hidden="true" style="width:34px;height:34px;border-radius:11px;background:#F1E4D6"></div><div style="font-family:Nunito,sans-serif;font-weight:800;font-size:17px;margin-top:14px">Privacy-first</div><div style="color:#4A4A4A;font-size:15px;margin-top:4px">Clear controls over who sees what.</div></div>
+    </div>
+  </section>
+
+  <section id="download" style="padding:0 20px 88px">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;border-radius:32px;padding:clamp(32px,5vw,64px);background:linear-gradient(140deg,#FF4B4B,#FF7A4B);color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;align-items:center;box-shadow:0 20px 44px rgba(255,75,75,0.24)">
+      <div>
+        <h2 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0">Your pet is already famous. Make it official.</h2>
+        <p style="font-size:18px;line-height:1.55;margin:16px 0 0;color:rgba(255,255,255,0.92);max-width:520px">Download Lucky's, post your first pet moment, and see who shows up.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+          <a href="https://apps.apple.com/us/app/luckys-pet-app/id6760656812" target="_blank" rel="noopener" aria-label="Download Lucky's Pet App on the App Store" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><span aria-hidden="true" style="font-size:26px;line-height:1;display:block;flex:none"></span><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">Download on the</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">App Store</span></span></a>
+          <a href="https://play.google.com/store/apps/details?id=com.blackdada.app" target="_blank" rel="noopener" aria-label="Get Lucky's Pet App on Google Play" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true" style="flex:none"><polygon points="2,1 14,12 2,23" fill="#34A853" /><polygon points="2,1 17.5,9.9 14,12" fill="#4285F4" /><polygon points="2,23 14,12 17.5,14.1" fill="#EA4335" /><polygon points="17.5,9.9 20.6,12 17.5,14.1 14,12" fill="#FBBC04" /></svg><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">GET IT ON</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">Google Play</span></span></a>
+        </div>
+      </div>
+      <sc-if value="{{ showQrCode }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;justify-content:center">
+          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121">
+            <div id="lucky-qr" role="img" aria-label="QR code linking to the Lucky's Pet App download page" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
+            <div style="font-size:13px;color:#4A4A4A;margin-top:10px;max-width:150px">Scan to install on your phone</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#fff;border-top:1px solid #ECECEC;padding:48px 20px 36px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="assets/luckys-logo.png" alt="Lucky's Pet App logo" style="height:52px;width:auto;display:block" />
+      </div>
+      <p style="color:#6B6B6B;font-size:15px;line-height:1.55;margin:14px 0 0;max-width:280px">The social app for pet lovers. Share, go live, get gifted.</p>
+    </div>
+    <div>
+      <div style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px">App</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+        <a href="#features" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">Features</a>
+        <a href="#how" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">How it Works</a>
+        <a href="#business" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">For Business</a>
+        <a href="#download" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">Download</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px">Legal</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+        <a href="Legal.dc.html#privacy" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">Privacy Policy</a>
+        <a href="Legal.dc.html#terms" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">Terms of Service</a>
+        <a href="Legal.dc.html#community" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">Community Guidelines</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px">Support</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+        <a href="mailto:luckyspetapp@gmail.com" style="color:#4A4A4A;text-decoration:none;font-size:15px" style-hover="color:#FF4B4B">luckyspetapp@gmail.com</a>
+        <span style="color:#6B6B6B;font-size:15px">iOS · Android · web coming soon</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:36px auto 0;padding-top:20px;border-top:1px solid #F0F0F0;color:#8A8A8A;font-size:14px">© 2026 Lucky's Pet App. All rights reserved.</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showQrCode&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;qrTarget&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://play.google.com/store/apps/details?id=com.blackdada.app&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  drawQr() {
+    const el = document.getElementById('lucky-qr');
+    if (!el || el.dataset.done) return;
+    const url = this.props.qrTarget || 'https://play.google.com/store/apps/details?id=com.blackdada.app';
+    const render = () => {
+      if (!window.QRCode) return false;
+      el.innerHTML = '';
+      new window.QRCode(el, { text: url, width: 150, height: 150, colorDark: '#212121', colorLight: '#ffffff', correctLevel: window.QRCode.CorrectLevel.M });
+      el.dataset.done = '1';
+      return true;
+    };
+    if (render()) return;
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+    s.onload = render;
+    document.head.appendChild(s);
+  }
+  componentDidUpdate() { this.drawQr(); }
+  componentDidMount() {
+    this.drawQr();
+    if (this.props.revealOnScroll === false) return;
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const hidden = new Set();
+    const show = (n) => {
+      if (!hidden.has(n)) return;
+      hidden.delete(n);
+      n.style.opacity = '1';
+      n.style.transform = 'none';
+      io.unobserve(n);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) show(e.target); });
+      sweep();
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    const sweep = () => {
+      hidden.forEach((n) => {
+        const r = n.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) show(n);
+      });
+    };
+    nodes.forEach((n) => {
+      const r = n.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      n.style.transition = 'opacity .55s ease, transform .55s ease';
+      n.style.opacity = '0';
+      n.style.transform = 'translateY(20px)';
+      hidden.add(n);
+      io.observe(n);
+    });
+    const revealAll = () => { hidden.forEach((n) => { n.style.opacity = '1'; n.style.transform = 'none'; }); hidden.clear(); };
+    let raf = 0, stop = false;
+    const tick = () => {
+      if (stop) return;
+      sweep();
+      raf = hidden.size ? requestAnimationFrame(tick) : 0;
+    };
+    raf = requestAnimationFrame(tick);
+    const bail = setTimeout(revealAll, 8000);
+    window.addEventListener('hashchange', revealAll);
+    this._cleanupReveal = () => {
+      stop = true;
+      if (raf) cancelAnimationFrame(raf);
+      clearTimeout(bail);
+      window.removeEventListener('hashchange', revealAll);
+      io.disconnect();
+      revealAll();
+    };
+  }
+  componentWillUnmount() {
+    if (this._cleanupReveal) this._cleanupReveal();
+  }
+  renderVals() {
+    return { showQrCode: this.props.showQrCode ?? true };
+  }
+}
+</script>
+</body>
+</html>
