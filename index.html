@@ -187,19 +187,19 @@
       <div>
         <h2 style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0">Your pet is already famous. Make it official.</h2>
         <p style="font-size:18px;line-height:1.55;margin:16px 0 0;color:rgba(255,255,255,0.92);max-width:520px">Download Lucky's, post your first pet moment, and see who shows up.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:flex-end;gap:16px">
+        <sc-if value="{{ showQrCode }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div id="lucky-qr" role="img" aria-label="QR code linking to the Lucky's Pet App download page" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
+            <div style="font-size:13px;color:#4A4A4A;margin-top:10px;max-width:150px">Scan to install on your phone</div>
+          </div>
+        </sc-if>
+        <div style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.28);border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:12px;min-width:min(100%,220px)">
           <a href="https://apps.apple.com/us/app/luckys-pet-app/id6760656812" target="_blank" rel="noopener" aria-label="Download Lucky's Pet App on the App Store" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><span aria-hidden="true" style="font-size:26px;line-height:1;display:block;flex:none"></span><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">Download on the</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">App Store</span></span></a>
           <a href="https://play.google.com/store/apps/details?id=com.blackdada.app" target="_blank" rel="noopener" aria-label="Get Lucky's Pet App on Google Play" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true" style="flex:none"><polygon points="2,1 14,12 2,23" fill="#34A853" /><polygon points="2,1 17.5,9.9 14,12" fill="#4285F4" /><polygon points="2,23 14,12 17.5,14.1" fill="#EA4335" /><polygon points="17.5,9.9 20.6,12 17.5,14.1 14,12" fill="#FBBC04" /></svg><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">GET IT ON</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">Google Play</span></span></a>
         </div>
       </div>
-      <sc-if value="{{ showQrCode }}" hint-placeholder-val="{{ true }}">
-        <div style="display:flex;justify-content:center">
-          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121">
-            <div id="lucky-qr" role="img" aria-label="QR code linking to the Lucky's Pet App download page" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
-            <div style="font-size:13px;color:#4A4A4A;margin-top:10px;max-width:150px">Scan to install on your phone</div>
-          </div>
-        </div>
-      </sc-if>
     </div>
   </section>
 </main>
