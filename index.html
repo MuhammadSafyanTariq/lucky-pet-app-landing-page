@@ -43,6 +43,7 @@
     <div style="position:absolute;inset:0;background:radial-gradient(900px 460px at 78% 12%, rgba(255,193,7,0.16), transparent 60%),radial-gradient(760px 420px at 12% 0%, rgba(33,150,243,0.12), transparent 62%);pointer-events:none"></div>
     <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center">
       <div data-reveal="">
+        <img src="assets/luckys-mark.png" alt="" aria-hidden="true" style="height:220px;width:auto;display:block;margin:0 0 8px 36px;object-fit:contain" />
         <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #EFE3D6;font-size:13px;font-weight:700;color:#8B5E3C;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
           <span aria-hidden="true" style="width:8px;height:8px;border-radius:99px;background:#FF4B4B"></span>iOS &amp; Android · web coming soon
         </div>
@@ -190,15 +191,15 @@
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:flex-end;gap:16px">
         <sc-if value="{{ showQrCode }}" hint-placeholder-val="{{ true }}">
-          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121;display:flex;flex-direction:column;align-items:center;justify-content:center">
-            <div id="lucky-qr" role="img" aria-label="QR code linking to the Lucky's Pet App download page" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
-            <div style="font-size:13px;color:#4A4A4A;margin-top:10px;max-width:150px">Scan to install on your phone</div>
+          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121;display:flex;flex-direction:column;align-items:center;gap:14px">
+            <div id="lucky-qr-apple" role="img" aria-label="QR code for the App Store" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
+            <a href="https://apps.apple.com/pk/app/luckys-pet-app/id6760656812" target="_blank" rel="noopener" aria-label="Download Lucky's Pet App on the App Store" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none;width:100%;justify-content:center;box-sizing:border-box" style-hover="background:#000"><span aria-hidden="true" style="font-size:26px;line-height:1;display:block;flex:none"></span><span style="display:block;line-height:1.15;text-align:left"><span style="display:block;font-size:11px;opacity:0.78">Download on the</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">App Store</span></span></a>
+          </div>
+          <div style="background:#fff;border-radius:24px;padding:18px;text-align:center;color:#212121;display:flex;flex-direction:column;align-items:center;gap:14px">
+            <div id="lucky-qr-play" role="img" aria-label="QR code for Google Play" style="width:150px;height:150px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"></div>
+            <a href="https://play.google.com/store/apps/details?id=com.blackdada.app" target="_blank" rel="noopener" aria-label="Get Lucky's Pet App on Google Play" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none;width:100%;justify-content:center;box-sizing:border-box" style-hover="background:#000"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true" style="flex:none"><polygon points="2,1 14,12 2,23" fill="#34A853" /><polygon points="2,1 17.5,9.9 14,12" fill="#4285F4" /><polygon points="2,23 14,12 17.5,14.1" fill="#EA4335" /><polygon points="17.5,9.9 20.6,12 17.5,14.1 14,12" fill="#FBBC04" /></svg><span style="display:block;line-height:1.15;text-align:left"><span style="display:block;font-size:11px;opacity:0.78">GET IT ON</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">Google Play</span></span></a>
           </div>
         </sc-if>
-        <div style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.28);border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:12px;min-width:min(100%,220px)">
-          <a href="https://apps.apple.com/us/app/luckys-pet-app/id6760656812" target="_blank" rel="noopener" aria-label="Download Lucky's Pet App on the App Store" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><span aria-hidden="true" style="font-size:26px;line-height:1;display:block;flex:none"></span><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">Download on the</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">App Store</span></span></a>
-          <a href="https://play.google.com/store/apps/details?id=com.blackdada.app" target="_blank" rel="noopener" aria-label="Get Lucky's Pet App on Google Play" style="display:flex;align-items:center;gap:12px;height:56px;padding:0 22px;border-radius:12px;background:#212121;color:#fff;text-decoration:none" style-hover="background:#000"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true" style="flex:none"><polygon points="2,1 14,12 2,23" fill="#34A853" /><polygon points="2,1 17.5,9.9 14,12" fill="#4285F4" /><polygon points="2,23 14,12 17.5,14.1" fill="#EA4335" /><polygon points="17.5,9.9 20.6,12 17.5,14.1 14,12" fill="#FBBC04" /></svg><span style="display:block;line-height:1.15"><span style="display:block;font-size:11px;opacity:0.78">GET IT ON</span><span style="display:block;font-family:Nunito,sans-serif;font-weight:800;font-size:17px">Google Play</span></span></a>
-        </div>
       </div>
     </div>
   </section>
@@ -241,22 +242,34 @@
 </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showQrCode&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;qrTarget&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://play.google.com/store/apps/details?id=com.blackdada.app&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showQrCode&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;qrTargetApple&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://apps.apple.com/pk/app/luckys-pet-app/id6760656812&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;qrTargetPlay&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://play.google.com/store/apps/details?id=com.blackdada.app&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   drawQr() {
-    const el = document.getElementById('lucky-qr');
-    if (!el || el.dataset.done) return;
-    const url = this.props.qrTarget || 'https://play.google.com/store/apps/details?id=com.blackdada.app';
+    const targets = [
+      { id: 'lucky-qr-apple', url: this.props.qrTargetApple || 'https://apps.apple.com/pk/app/luckys-pet-app/id6760656812' },
+      { id: 'lucky-qr-play', url: this.props.qrTargetPlay || 'https://play.google.com/store/apps/details?id=com.blackdada.app' },
+    ];
+    const pending = targets.filter(({ id }) => {
+      const el = document.getElementById(id);
+      return el && !el.dataset.done;
+    });
+    if (!pending.length) return;
     const render = () => {
       if (!window.QRCode) return false;
-      el.innerHTML = '';
-      new window.QRCode(el, { text: url, width: 150, height: 150, colorDark: '#212121', colorLight: '#ffffff', correctLevel: window.QRCode.CorrectLevel.M });
-      el.dataset.done = '1';
+      pending.forEach(({ id, url }) => {
+        const el = document.getElementById(id);
+        if (!el || el.dataset.done) return;
+        el.innerHTML = '';
+        new window.QRCode(el, { text: url, width: 150, height: 150, colorDark: '#212121', colorLight: '#ffffff', correctLevel: window.QRCode.CorrectLevel.M });
+        el.dataset.done = '1';
+      });
       return true;
     };
     if (render()) return;
+    if (document.querySelector('script[data-lucky-qrcode]')) return;
     const s = document.createElement('script');
     s.src = 'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+    s.dataset.luckyQrcode = '1';
     s.onload = render;
     document.head.appendChild(s);
   }
